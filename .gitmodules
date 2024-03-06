@@ -1,0 +1,3 @@
+[submodule "CustomBiometric"]
+	path = CustomBiometric
+	url = https://github.com/Shanu8989/CustomBiometric.git
