@@ -24,13 +24,15 @@ class LoginActivity : AppCompatActivity() {
     }
 
     private fun setUI() {
-        val userName = binding.username.text.toString()
-        val password = binding.password.text.toString()
+        binding.btnLogin.setOnClickListener {
+            val userName = binding.username.text.toString()
+            val password = binding.password.text.toString()
 
-        if (fieldsNullOrEmpty(userName, password)) {
-            Toast.makeText(this, "All fields are mandatory", Toast.LENGTH_SHORT).show()
-        } else {
-            dialog.callCustomBiometricDialog()
+            if (fieldsNullOrEmpty(userName, password)) {
+                Toast.makeText(this, "All fields are mandatory", Toast.LENGTH_SHORT).show()
+            } else {
+                dialog.callCustomBiometricDialog()
+            }
         }
     }
 
