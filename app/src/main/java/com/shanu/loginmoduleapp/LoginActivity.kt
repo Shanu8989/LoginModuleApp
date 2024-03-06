@@ -31,7 +31,9 @@ class LoginActivity : AppCompatActivity() {
             if (fieldsNullOrEmpty(userName, password)) {
                 Toast.makeText(this, "All fields are mandatory", Toast.LENGTH_SHORT).show()
             } else {
-                dialog.callCustomBiometricDialog()
+                if (::dialog.isInitialized) {
+                    dialog.callCustomBiometricDialog()
+                }
             }
         }
     }
