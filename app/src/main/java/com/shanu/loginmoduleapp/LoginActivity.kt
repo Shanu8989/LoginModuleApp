@@ -37,7 +37,10 @@ class LoginActivity : AppCompatActivity() {
 
     private fun invokeCustomDialog() {
         customDialog =
-            CustomBiometricDialog.Builder().isCancelable(true).onBiometricClick {
+            CustomBiometricDialog.Builder()
+                .isCancelable(true)
+                .setCustomDialogTitle("Identify yourself")
+                .onBiometricClick {
                 Toast.makeText(this, "Clicked on Biometric Dialog.", Toast.LENGTH_SHORT).show()
             }.build()
 
