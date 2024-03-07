@@ -29,7 +29,7 @@ class LoginActivity : AppCompatActivity() {
             val password = binding.password.text.toString()
 
             if (fieldsNullOrEmpty(userName, password)) {
-                Toast.makeText(this, "All fields are mandatory", Toast.LENGTH_SHORT).show()
+                Toast.makeText(this, "All fields are mandatory...", Toast.LENGTH_SHORT).show()
             } else {
                 dialog = SettingsActivity()
             }
